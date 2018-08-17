@@ -5,9 +5,9 @@
       <ul class="list-group">
       <% @cocktail.doses.each do |dose| %>
         <li class="list-group-item">
-          <%= dose.description  %>
+          <%= dose.description " of " @dose.ingredient %>
         </li>
-        <% end %>
+      <% end %>
       </ul>
       <hr>
       <%= link_to "new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success" %>
