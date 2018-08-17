@@ -1,25 +1,14 @@
 <div class="navbar-wagon">
-  <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <%= image_tag "logo.jpg" %>
-  </a>
-
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-   <%= link_to "Back to home", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+   <%= link_to "Home", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Profile picture with dropdown list -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-        <ul class
-        ="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
-      </div>
+    <div class="navbar-wagon-item ">
+        <a href="/" class="navbar-wagon-brand">
+        <%= image_tag "logo.jpg" %>
+        </a>
     </div>
   </div>
 
