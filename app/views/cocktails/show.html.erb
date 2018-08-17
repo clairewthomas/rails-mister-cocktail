@@ -5,14 +5,15 @@
       <ul class="list-group">
       <% @cocktail.doses.each do |dose| %>
         <li class="list-group-item">
-          <%= dose.description " of " @dose.ingredient %>
+          <%= dose.description + " of " +  dose.ingredient.name %>
+          <%= link_to "delete", cocktail_dose_path(dose), method: :delete, data: { confirm: "Delete #{dose.description}?" } %>
         </li>
       <% end %>
       </ul>
       <hr>
-      <%= link_to "new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success" %>
+      <%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success" %>
       <hr>
-      <%= link_to "back to list", cocktails_path, class: "btn btn-info" %>
+      <%= link_to "Back to list", cocktails_path, class: "btn btn-info" %>
     </div>
   </div>
 </div>
