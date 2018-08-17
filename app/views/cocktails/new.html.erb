@@ -1,13 +1,14 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h2>Create a new cocktail</h2>
-      <%= simple_form_for @cocktail do |f| %>
-        <%= f.input :name, placeholder: 'caïpirinha , gin tonic..' %>
-        <%= f.submit class: 'btn btn-primary' %>
-      <% end %>
-      <hr>
-      <%= link_to "back to list", cocktails_path, class: "btn btn-info" %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(' <%= image_path("cocktail.jpg") %>');">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h2>Create a new cocktail</h2>
+        <%= simple_form_for @cocktail do |f| %>
+          <%= f.input :name, placeholder: 'caïpirinha , gin tonic..' %>
+          <%= f.input :photo, placeholder: 'upload nice photo for your cocktail' %>
+          <%= f.submit class: 'btn btn-primary' %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
